@@ -13,7 +13,7 @@ public class Gratificacion {
 
         if (siono == "si" || siono == "Si || soino == SI") {
 
-            if (Main.sueldobase <= gratmax) {
+            if (Main.sueldobruto <= gratmax) {
             }
         }
     }

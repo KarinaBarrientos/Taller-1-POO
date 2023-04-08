@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * Esta clase es para calcular el descuento afp
  * contiene las distintas afp existentes
@@ -13,39 +12,35 @@ public class AFP {
     private double Provida;
     private double Uno;
     private double afpfijo;
-    private int sueldobase;
     private double descuentoafp;
-
     /**
      * Esto es un contructor que recibe el sueldo bruto y define el descuento de cada afp
      *
-     * @param sueldobase es el sueldo bruto ingresado
+     * @param sueldobruto es el sueldo bruto ingresado
      */
-
-    public AFP(int sueldobase) {
+    public AFP(int sueldobruto) {
         this.descuentoafp = descuentoafp;
-        //se irá
-        this.sueldobase = sueldobase;
-        this.afpfijo = sueldobase * 0.1;
-        this.Capital = sueldobase * 0.0144 + this.afpfijo;
-        this.Cuprum = sueldobase * 0.0144 + this.afpfijo;
-        this.Habitat = sueldobase * 0.0127 + this.afpfijo;
-        this.Modelo = sueldobase * 0.0058 + this.afpfijo;
-        this.Plan_vital = sueldobase * 0.0116 + this.afpfijo;
-        this.Provida = sueldobase * 0.0145 + this.afpfijo;
-        this.Uno = sueldobase * 0.0069 + this.afpfijo;
+        this.afpfijo = sueldobruto * 0.1;
+        this.Capital = sueldobruto * 0.0144 + this.afpfijo;
+        this.Cuprum = sueldobruto * 0.0144 + this.afpfijo;
+        this.Habitat = sueldobruto * 0.0127 + this.afpfijo;
+        this.Modelo = sueldobruto * 0.0058 + this.afpfijo;
+        this.Plan_vital = sueldobruto * 0.0116 + this.afpfijo;
+        this.Provida = sueldobruto * 0.0145 + this.afpfijo;
+        this.Uno = sueldobruto * 0.0069 + this.afpfijo;
 
     }
-
     /**
      * metodo hecho para calcular el descuento correspondiente en base a el afp
+     *
+     * @return devuelve el descuento segun el afp escogido
      */
-    public void operacion() {
+    public double operacion() {
         while (true) {
-            //metodo constructor con la suma descuentoafp
             Scanner teclado = new Scanner(System.in);
             System.out.println("A continuacion ingrese su tipo de AFP");
-            String afptipo = teclado.next();
+            String afptipoin = teclado.nextLine();
+            String afptipo = afptipoin.replace(" ", "");
             if (afptipo.equalsIgnoreCase("Capital")) {
                 descuentoafp = this.Capital;
                 break;
@@ -67,8 +62,12 @@ public class AFP {
             } else if (afptipo.equalsIgnoreCase("Uno")) {
                 descuentoafp = this.Uno;
                 break;
+            } else if (afptipo.equalsIgnoreCase("Nocotizo")) {
+                descuentoafp = 0;
+                break;
             } else
-                System.out.println("Formato incorrecto, favor de ingresar unicamente el tipo de AFP");
+                System.out.println("Formato incorrecto, favor de ingresar unicamente el tipo de AFP,o en su defecto (No cotizo) ");
         }
+        return descuentoafp;
     }
 }

@@ -12,10 +12,10 @@ public class Isaprefonasa {
     /**
      * contructor que recibe el sueldo bruto y define el descuento segun isapre o fonasa
      *
-     * @param sueldobase es el sueldo bruto ingresado
+     * @param sueldobruto es el sueldo bruto ingresado
      */
-    public Isaprefonasa(int sueldobase) {
-        this.fonasa = sueldobase * 0.07;
+    public Isaprefonasa(int sueldobruto) {
+        this.fonasa = sueldobruto * 0.07;
         this.isapreenUF = isapreenUF;
         this.descuentosalud = descuentosalud;
         this.UFaCLP = 35568.59;
@@ -23,12 +23,15 @@ public class Isaprefonasa {
 
     /**
      * Metodo que calcula el descuento al sueldobase de salud
+     *
+     * @return devuelve el descuento segun lo escogido ya sea fonasa o isapre
      */
-    public void operacion() {
+    public double operacion() {
         Scanner teclado = new Scanner(System.in);
         while (true) {
             System.out.println("En que servicio se encuentra; ¿Fonasa o Isapre?");
-            String salud = teclado.nextLine();
+            String saludin = teclado.nextLine();
+            String salud = saludin.replace(" ", "");
             if (salud.equalsIgnoreCase("Fonasa")) {
                 if (this.fonasa == this.UFaCLP * 5.614) {
                     descuentosalud = this.UFaCLP * 5.614;
@@ -48,8 +51,12 @@ public class Isaprefonasa {
                     teclado.next();
                 }
                 break;
+            } else if (salud.equalsIgnoreCase("Nocotizo")) {
+                descuentosalud = 0;
+                break;
             } else
                 System.out.println("Formato incorrecto, favor de ingresar una de las opciones");
         }
+        return descuentosalud;
     }
 }
