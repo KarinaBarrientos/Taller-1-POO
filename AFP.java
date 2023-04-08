@@ -34,6 +34,7 @@ public class AFP {
         this.Plan_vital = sueldobase * 0.0116 + this.afpfijo;
         this.Provida = sueldobase * 0.0145 + this.afpfijo;
         this.Uno = sueldobase * 0.0069 + this.afpfijo;
+
     }
 
     /**
