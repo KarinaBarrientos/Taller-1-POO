@@ -8,16 +8,19 @@ public class Main {
         Scanner inbase = new Scanner(System.in);
 
         System.out.println("¿Cuál es tu sueldo base?");
-        sueldobruto = inbase.nextInt();
+        if (inbase.hasNextInt()) {
+            sueldobruto = inbase.nextInt();
+        } else {
+            System.out.println("Formato incorrecto, favor de ingresar solo numeros");
+        }
 
         AFP afp = new AFP(sueldobruto);
         double descuentoafp = afp.operacion();
-        //System.out.println(descuentoafp);
+
         Isaprefonasa eleccionfonasaoisapre = new Isaprefonasa(sueldobruto);
         double descuentosalud = eleccionfonasaoisapre.operacion();
-        //System.out.println(descuentosalud);
 
-        int sueldoliquido = (int) (sueldobruto - descuentoafp - descuentosalud );
+        int sueldoliquido = (int) (sueldobruto - descuentoafp - descuentosalud);
         //le falta gratificacion
         System.out.println(sueldoliquido);
     }

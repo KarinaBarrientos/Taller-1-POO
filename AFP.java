@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 /**
  * Esta clase es para calcular el descuento afp
  * contiene las distintas afp existentes
@@ -13,6 +14,7 @@ public class AFP {
     private double Uno;
     private double afpfijo;
     private double descuentoafp;
+
     /**
      * Esto es un contructor que recibe el sueldo bruto y define el descuento de cada afp
      *
@@ -28,8 +30,8 @@ public class AFP {
         this.Plan_vital = sueldobruto * 0.0116 + this.afpfijo;
         this.Provida = sueldobruto * 0.0145 + this.afpfijo;
         this.Uno = sueldobruto * 0.0069 + this.afpfijo;
-
     }
+
     /**
      * metodo hecho para calcular el descuento correspondiente en base a el afp
      *
