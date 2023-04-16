@@ -15,8 +15,8 @@ public class Main {
             System.out.println("Formato incorrecto, favor de ingresar solo numeros");
         }
 
-        Gratificacion gratificacion = new Gratificacion(sueldobruto);
-        sueldobruto = gratificacion.metodo_gratificacion();
+        Gratificacion grat = new Gratificacion(sueldobruto);
+        double gratificacion = grat.metodo_gratificacion();
 
         AFP afp = new AFP(sueldobruto);
         double descuentoafp = afp.operacion();
@@ -24,7 +24,9 @@ public class Main {
         Isaprefonasa eleccionfonasaoisapre = new Isaprefonasa(sueldobruto);
         double descuentosalud = eleccionfonasaoisapre.operacion();
 
-        int sueldoliquido = (int) (sueldobruto - sueldobruto * 0.006 - descuentoafp - descuentosalud);
+        double scecantia = sueldobruto * 0.006;
+
+        int sueldoliquido = (int) (sueldobruto + gratificacion - scecantia - descuentoafp - descuentosalud);
 
         System.out.println("El sueldo líquido es: " + sueldoliquido);
     }
