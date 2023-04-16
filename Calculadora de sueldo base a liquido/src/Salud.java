@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 /**
  * Esta clase calcula el descuento dependiendo si es fonasa o isapre
+ *
+ * @author demis
+ * @author
+ * @version 1.0
  */
 public class Salud {
     private double fonasa;

@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 /**
  * En esta clase se calcula el sueldo liquido a partir del sueldo base
+ *
+ * @author Demis
+ * @author
+ * @version 1.0
  */
 public class Main {
     public static void main(String[] args) {

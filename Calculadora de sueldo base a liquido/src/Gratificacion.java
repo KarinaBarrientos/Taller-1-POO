@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 /**
  * En esta clase se calcula la gratificacion con base en el sueldo base
+ * @author Demis
+ * @author
+ * @version 1.0
  */
 public class Gratificacion {
     private int sueldobase;
