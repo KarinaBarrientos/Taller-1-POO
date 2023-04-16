@@ -18,9 +18,9 @@ public class AFP {
     /**
      * Esto es un contructor que recibe el sueldo bruto y define el descuento de cada afp
      *
-     * @param sueldobruto es el sueldo bruto ingresado
+     * @param sueldobruto es el sueldo base mas la gratificacion
      */
-    public AFP(int sueldobruto) {
+    public AFP(double sueldobruto) {
         this.descuentoafp = descuentoafp;
         this.afpfijo = sueldobruto * 0.1;
         this.Capital = sueldobruto * 0.0144 + this.afpfijo;

@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Esta clase calcula el descuento dependiendo si es fonasa o isapre
  */
-public class Isaprefonasa {
+public class Salud {
     private double fonasa;
     private double isapreenUF;
     private double UFaCLP;
@@ -12,9 +12,9 @@ public class Isaprefonasa {
     /**
      * contructor que recibe el sueldo bruto y define el descuento segun isapre o fonasa
      *
-     * @param sueldobruto es el sueldo bruto ingresado
+     * @param sueldobruto es el sueldo base mas la gratificacion
      */
-    public Isaprefonasa(int sueldobruto) {
+    public Salud(double sueldobruto) {
         this.fonasa = sueldobruto * 0.07;
         this.isapreenUF = isapreenUF;
         this.descuentosalud = descuentosalud;
