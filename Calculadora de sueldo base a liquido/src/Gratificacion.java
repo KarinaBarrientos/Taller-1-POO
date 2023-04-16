@@ -37,7 +37,7 @@ public class Gratificacion {
                 gratificacion = 0;
                 break;
             } else {
-                System.out.println("Respuesta invalida, por favor reponder con ´si´ o ´no´");
+                System.out.println("Formato incorrecto, favor de ingresar un 'si' o un 'no'");
             }
         }
         return sueldobase + gratificacion;

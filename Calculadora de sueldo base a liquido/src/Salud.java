@@ -41,7 +41,7 @@ public class Salud {
                 break;
             } else if (salud.equalsIgnoreCase("Isapre")) {
                 while (true) {
-                    System.out.println("indique la cantidad de UF ");
+                    System.out.println("indique la cantidad de UF: ");
                     if (teclado.hasNextInt()) {
                         double UF = teclado.nextDouble();
                         descuentosalud = UF * this.UFaCLP;

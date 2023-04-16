@@ -40,7 +40,9 @@ public class AFP {
     public double operacion() {
         while (true) {
             Scanner teclado = new Scanner(System.in);
-            System.out.println("A continuacion ingrese su tipo de AFP");
+            System.out.println("A continuacion ingrese su tipo de Afp");
+            System.out.print("Afp ");
+
             String afptipoin = teclado.nextLine();
             String afptipo = afptipoin.replace(" ", "");
             if (afptipo.equalsIgnoreCase("Capital")) {
