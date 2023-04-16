@@ -51,11 +51,11 @@ public class Salud {
                     teclado.next();
                 }
                 break;
-            } else if (salud.equalsIgnoreCase("Nocotizo")) {
+            } else if (salud.equalsIgnoreCase("Nocotiza")) {
                 descuentosalud = 0;
                 break;
             } else
-                System.out.println("Formato incorrecto, favor de ingresar una de las opciones");
+                System.out.println("Formato incorrecto, favor de ingresar una de las opciones, o en su defecto: No cotiza");
         }
         return descuentosalud;
     }

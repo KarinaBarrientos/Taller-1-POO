@@ -64,11 +64,11 @@ public class AFP {
             } else if (afptipo.equalsIgnoreCase("Uno")) {
                 descuentoafp = this.Uno;
                 break;
-            } else if (afptipo.equalsIgnoreCase("Nocotizo")) {
+            } else if (afptipo.equalsIgnoreCase("Nocotiza")) {
                 descuentoafp = 0;
                 break;
             } else
-                System.out.println("Formato incorrecto, favor de ingresar unicamente el tipo de AFP,o en su defecto (No cotizo) ");
+                System.out.println("Formato incorrecto, favor de ingresar unicamente el tipo de AFP,o en su defecto: No cotiza" );
         }
         return descuentoafp;
     }
