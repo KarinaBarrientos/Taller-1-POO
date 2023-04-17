@@ -46,12 +46,13 @@ public class Salud {
             } else if (salud.equalsIgnoreCase("Isapre")) {
                 while (true) {
                     System.out.println("indique la cantidad de UF: ");
-                    if (teclado.hasNextInt()) {
+                    if (teclado.hasNextDouble()) {
                         double UF = teclado.nextDouble();
                         descuentosalud = UF * this.UFaCLP;
                         break;
                     } else
                         System.out.println("Formato incorrecto, favor de ingresar unicamente numeros");
+                        System.out.println("Usar coma para ingresar decimales");
                     teclado.next();
                 }
                 break;
@@ -64,3 +65,4 @@ public class Salud {
         return descuentosalud;
     }
 }
+
