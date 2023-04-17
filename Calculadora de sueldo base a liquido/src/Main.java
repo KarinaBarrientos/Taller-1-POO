@@ -14,10 +14,10 @@ public class Main {
         while (repeticion.equalsIgnoreCase("si")) {
 
             int sueldobase = 0;
-            Scanner inbase = new Scanner(System.in);
+            Scanner teclado = new Scanner(System.in);
             while (true) {
                 System.out.println("¿Cuál es su sueldo base?");
-                String sueldobasein = inbase.nextLine();
+                String sueldobasein = teclado.nextLine();
                 if (sueldobasein.contains("-")) {
                     System.out.println("Formato incorrecto, favor de ingresar solo numeros");
                 } else
@@ -46,7 +46,7 @@ public class Main {
             System.out.println("Tu sueldo líquido es: " + sueldoliquido);
 
             System.out.println("¿Desea hacer otro cálculo?");
-            repeticion = inbase.next();
+            repeticion = teclado.next();
         }
     }
 }
