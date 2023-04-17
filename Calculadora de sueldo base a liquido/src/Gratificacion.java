@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * En esta clase se calcula la gratificacion con base en el sueldo base
  * @author Demis
- * @author
+ * @author Karina
  * @version 1.0
  */
 public class Gratificacion {

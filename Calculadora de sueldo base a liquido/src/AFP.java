@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Esta clase es para calcular el descuento afp
  * contiene las distintas afp existentes
  * @author Demis
- * @author
+ * @author Karina
  * @version 1.0
  */
 public class AFP {
