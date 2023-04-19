@@ -13,13 +13,13 @@ public class Main {
         String repeticion = "si";
         while (repeticion.equalsIgnoreCase("si")) {
 
-            int sueldobase = 0;
+            int sueldobase;
             Scanner teclado = new Scanner(System.in);
             while (true) {
                 System.out.println("¿Cuál es su sueldo base?");
                 String sueldobasein = teclado.nextLine();
                 if (sueldobasein.contains("-")) {
-                    System.out.println("Formato incorrecto, favor de ingresar solo numeros");
+                    System.out.println("Formato incorrecto, favor de no ingresar numeros negativos");
                 } else
                     try {
                         sueldobasein = sueldobasein.replaceAll("[.,]", "");
